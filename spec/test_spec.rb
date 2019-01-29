@@ -37,7 +37,7 @@ describe "scoring a role in the ones category" do
 
       score = score_roll(roll, category)
 
-      expect(score).to eq(1)
+      expect(score).not_to eq(5)
     end
   end
 
