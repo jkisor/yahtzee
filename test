@@ -1,0 +1,6 @@
+#!/bin/sh
+
+(git diff --name-only | grep Gemfile) && bundle
+git add .
+bundle exec rspec && git commit -m working || git reset --hard
+
