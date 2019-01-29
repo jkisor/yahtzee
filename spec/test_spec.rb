@@ -40,3 +40,21 @@ describe "scoring a role in the ones category" do
   end
 
 end
+
+
+describe "scoring a role in the twos category" do
+
+  context "when no twos where rolled" do
+  
+    it "scores 0" do
+      roll = [3,3,3,3,3]
+      category = :twos
+  
+      score = score_roll(roll, category) 
+  
+      expect(score).to eq(0)
+    end
+  
+  end
+
+end
