@@ -1,4 +1,5 @@
-class PairScorer ; end
+require "./number_scorer"
+require "./pair_scorer"
 
 module Scorer
   
