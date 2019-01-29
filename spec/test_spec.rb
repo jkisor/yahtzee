@@ -1,10 +1,24 @@
+class NumberScorer
+  
+  def initialize(number)
+    @number = number
+  end
+
+  def score(roll)
+    roll.select { |x| x == @number }.reduce(0, :+)
+  end
+
+end
+
 def score_roll(roll, category)
   number_by_category = { :ones => 1, :twos => 2 }
 
   number = number_by_category.fetch(category)
 
-  numbers_category_score(roll, number)
+  NumberScorer.new(number).score(roll)
 end
+
+
 
 def numbers_category_score(roll, number)
   roll.select { |x| x == number }.reduce(0, :+)
