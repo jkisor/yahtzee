@@ -1,1 +1,3 @@
-class PairScorer ; end
+class PairScorer
+
+end
