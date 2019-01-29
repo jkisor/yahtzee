@@ -1,7 +1,7 @@
 def score_roll(roll, category)
-  number = { :ones => 1, :twos => 2 }
+  number_by_category = { :ones => 1, :twos => 2 }
 
-  roll.select { |x| x == number[category] }.reduce(0, :+)
+  roll.select { |x| x == number_by_category[category] }.reduce(0, :+)
 end
 
 describe "scoring a role in the ones category" do
@@ -30,7 +30,7 @@ describe "scoring a role in the ones category" do
     end
   end
 
-  context "when a many ones are rolled" do
+  context "when many ones are rolled" do
     it "scores sum of ones" do
       roll = [1,1,1,1,1]
       category = :ones
@@ -61,7 +61,7 @@ describe "scoring a role in the twos category" do
 
   context "when a single two was rolled" do
   
-    it "scores 2" do
+    it "scores sum of twos" do
       roll = [2,3,4,5,6]
       category = :twos
   
@@ -70,6 +70,17 @@ describe "scoring a role in the twos category" do
       expect(score).to eq(2)
     end
   
+  end
+
+  context "when many twos are rolled" do
+    it "scores sum of twos" do
+      roll = [2,2,2,2,2]
+      category = :twos
+
+      score = score_roll(roll, category)
+
+      expect(score).to eq(10)
+    end
   end
 
 end
