@@ -10,12 +10,21 @@ class NumberScorer
 
 end
 
+module Scorer
+
+  def self.for_category(category)
+    number_by_category = { :ones => 1, :twos => 2 }
+
+    number = number_by_category.fetch(category)
+    NumberScorer.new(number)
+  end
+
+end
+
 def score_roll(roll, category)
-  number_by_category = { :ones => 1, :twos => 2 }
-
-  number = number_by_category.fetch(category)
-
-  NumberScorer.new(number).score(roll)
+  scorer = Scorer.for_category(category)
+  
+  scorer.score(roll)
 end
 
 
