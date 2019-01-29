@@ -1,7 +1,7 @@
 def score_roll(roll, category)
   number = { :ones => 1 }
 
-  roll.select { |x| x == 1 }.reduce(0, :+)
+  roll.select { |x| x == number[category] }.reduce(0, :+)
 end
 
 describe "scoring a role in the ones category" do
