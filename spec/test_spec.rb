@@ -1,4 +1,6 @@
 def score_roll(roll, category)
+  number = { :ones => 1 }
+
   roll.select { |x| x == 1 }.reduce(0, :+)
 end
 
