@@ -1,7 +1,7 @@
 def score_roll(roll, category)
   number_by_category = { :ones => 1, :twos => 2 }
 
-  number = number_by_category[category]
+  number = number_by_category.fetch(category)
 
   numbers_category_score(roll, number)
 end
