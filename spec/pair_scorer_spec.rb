@@ -24,4 +24,16 @@ describe PairScorer do
 
   end
 
+
+  context "when many pairs" do
+
+    it "scores sum of highest number pair" do
+      roll = [1,1,1,2,2]
+      score = subject.score(roll)
+
+      expect(score).to eq(4)
+    end
+
+  end
+
 end
