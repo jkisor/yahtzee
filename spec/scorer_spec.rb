@@ -8,6 +8,13 @@ describe Scorer do
       scorer = subject.for_category(:ones)
       expect(scorer).to be_a NumberScorer
     end
-  end  
+  end
+
+  context "for twos category" do
+    it "creates a scorer" do
+      scorer = subject.for_category(:twos)
+      expect(scorer).to be_a NumberScorer
+    end
+  end 
   
 end
