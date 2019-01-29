@@ -1,0 +1,2 @@
+class TwoPairScorer
+end

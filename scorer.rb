@@ -1,7 +1,6 @@
 require "./number_scorer"
 require "./pair_scorer"
-
-class TwoPairScorer ; end
+require "./two_pair_scorer"
 
 module Scorer
   
