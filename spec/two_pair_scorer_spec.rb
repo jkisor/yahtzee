@@ -13,4 +13,15 @@ describe TwoPairScorer do
 
   end
 
+  context "when two pairs" do
+
+    it "scores sum both pairs" do
+      roll = [1,1,2,2,5]
+      score = subject.score(roll)
+
+      expect(score).not_to eq(6)
+    end
+
+  end
+
 end
