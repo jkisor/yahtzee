@@ -10,9 +10,14 @@ module Scorer
   }
 
   def self.for_category(category)
-    number = NUMBER_BY_CATEGORY.fetch(category)
 
-    NumberScorer.new(number)
+    case category
+    when *NUMBER_BY_CATEGORY.keys
+      number = NUMBER_BY_CATEGORY.fetch(category)
+
+      NumberScorer.new(number)
+    end
+
   end
 
 end
