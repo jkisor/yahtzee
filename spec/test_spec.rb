@@ -57,4 +57,17 @@ describe "scoring a role in the twos category" do
   
   end
 
+  context "when a single two was rolled" do
+  
+    it "scores 2" do
+      roll = [2,3,4,5,6]
+      category = :twos
+  
+      score = score_roll(roll, category) 
+  
+      expect(score).not_to eq(2)
+    end
+  
+  end
+
 end
