@@ -4,7 +4,8 @@ describe Scorer do
   subject { described_class }
 
   it do
-    expect(true).to eq(true)
+    scorer = subject.for_category(:ones)
+    expect(scorer).to be_a NumberScorer
   end
 
-end 
+end
