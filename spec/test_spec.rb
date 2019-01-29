@@ -1,16 +1,7 @@
-class NumberScorer
-  
-  def initialize(number)
-    @number = number
-  end
-
-  def score(roll)
-    roll.select { |x| x == @number }.reduce(0, :+)
-  end
-
-end
+require "./number_scorer"
 
 module Scorer
+  
   NUMBER_BY_CATEGORY = { 
     :ones   => 1, 
     :twos   => 2,
