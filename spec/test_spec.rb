@@ -1,5 +1,5 @@
 def score_roll(roll, category)
-  number = { :ones => 1 }
+  number = { :ones => 1, :twos => 2 }
 
   roll.select { |x| x == number[category] }.reduce(0, :+)
 end
@@ -67,7 +67,7 @@ describe "scoring a role in the twos category" do
   
       score = score_roll(roll, category) 
   
-      expect(score).not_to eq(2)
+      expect(score).to eq(2)
     end
   
   end
