@@ -4,7 +4,7 @@ describe NumberScorer do
 
   context "when no occurances of number are rolled" do
   
-    it "scores 0" do
+    it "scores zero" do
       roll = [2,3,4,5,6]
       scorer = NumberScorer.new(1)
   
