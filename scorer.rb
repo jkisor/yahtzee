@@ -1,6 +1,8 @@
 require "./number_scorer"
 require "./pair_scorer"
 
+class TwoPairScorer ; end
+
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
@@ -21,6 +23,8 @@ module Scorer
       NumberScorer.new(number)
     when :pair
       PairScorer.new
+    when :two_pair
+      TwoPairScorer.new
     end
 
   end
