@@ -19,7 +19,7 @@ describe PairScorer do
       roll = [1,1,3,4,5]
       score = subject.score(roll)
 
-      expect(score).not_to eq(2)
+      expect(score).to eq(2)
     end
 
   end
