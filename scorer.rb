@@ -1,3 +1,5 @@
+class PairScorer ; end
+
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
@@ -16,6 +18,8 @@ module Scorer
       number = NUMBER_BY_CATEGORY.fetch(category)
 
       NumberScorer.new(number)
+    when :pair
+      PairScorer.new
     end
 
   end

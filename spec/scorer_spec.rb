@@ -11,5 +11,13 @@ describe Scorer do
       end
     end
   end
+
+  context "for pair category" do
+    it "creates a scorer" do
+      category = :pair
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a PairScorer
+    end
+  end
   
 end
