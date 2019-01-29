@@ -16,6 +16,7 @@ module Scorer
     number_by_category = { :ones => 1, :twos => 2 }
 
     number = number_by_category.fetch(category)
+
     NumberScorer.new(number)
   end
 
@@ -25,12 +26,6 @@ def score_roll(roll, category)
   scorer = Scorer.for_category(category)
   
   scorer.score(roll)
-end
-
-
-
-def numbers_category_score(roll, number)
-  roll.select { |x| x == number }.reduce(0, :+)
 end
 
 describe "scoring a role in the ones category" do
