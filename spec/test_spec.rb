@@ -1,5 +1,6 @@
 def score_roll(roll, category)
   return 1 if roll.include?(1)
+  
   0
 end
 
