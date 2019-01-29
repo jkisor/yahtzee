@@ -1,7 +1,5 @@
 def score_roll(roll, category)
-  return 1 if roll.include?(1)
-
-  0
+  roll.select { |x| x == 1 }.reduce(0, :+)
 end
 
 describe "scoring a role in the ones category" do
@@ -37,7 +35,7 @@ describe "scoring a role in the ones category" do
 
       score = score_roll(roll, category)
 
-      expect(score).not_to eq(5)
+      expect(score).to eq(5)
     end
   end
 
