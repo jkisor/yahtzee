@@ -3,6 +3,10 @@ def score_roll(roll, category)
 
   number = number_by_category[category]
 
+  numbers_category_score(roll, number)
+end
+
+def numbers_category_score(roll, number)
   roll.select { |x| x == number }.reduce(0, :+)
 end
 
