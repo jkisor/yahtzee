@@ -4,8 +4,8 @@ class NumberScorer
     @number = number
   end
 
-  def score(roll)
-    roll.select { |x| x == @number }.reduce(0, :+)
+  def score(dice)
+    dice.select { |x| x == @number }.reduce(0, :+)
   end
 
 end

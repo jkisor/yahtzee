@@ -7,9 +7,9 @@ describe NOfAKindScorer do
   context "no match" do
   
     it "scores zero" do
-      roll = [1,2,3,4,5]
+      dice = [1,2,3,4,5]
       
-      score = subject.score(roll)
+      score = subject.score(dice)
 
       expect(score).to eq(0)
     end
@@ -19,9 +19,9 @@ describe NOfAKindScorer do
   context "match" do
 
     it "scores sum of n of a kind" do
-      roll = [1,1,1,1,5]
+      dice = [1,1,1,1,5]
       
-      score = subject.score(roll)
+      score = subject.score(dice)
 
       expect(score).to eq(4)
     end

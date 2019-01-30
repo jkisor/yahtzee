@@ -5,9 +5,9 @@ describe SmallStraightScorer do
   context "no match" do
 
     it "scores zero" do
-      roll = [3,5,6,1,2]
+      dice = [3,5,6,1,2]
       
-      score = subject.score(roll)
+      score = subject.score(dice)
 
       expect(score).to eq(0)
     end
@@ -17,9 +17,9 @@ describe SmallStraightScorer do
   context "match" do
 
     it "scores sum of die" do
-      roll = [1,2,3,4,5]
+      dice = [1,2,3,4,5]
       
-      score = subject.score(roll)
+      score = subject.score(dice)
 
       expect(score).to eq(15)
     end

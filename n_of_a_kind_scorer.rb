@@ -4,11 +4,11 @@ class NOfAKindScorer
     @count = count
   end
 
-  def score(roll)
+  def score(dice)
 
-    roll = Roll.new(roll)
+    dice = Dice.new(dice)
     
-    (roll.n_of_a_kind(@count).max || 0) * @count
+    (dice.n_of_a_kind(@count).max || 0) * @count
 
   end
 

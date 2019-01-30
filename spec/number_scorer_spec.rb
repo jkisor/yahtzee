@@ -5,10 +5,10 @@ describe NumberScorer do
   context "when no occurances of number are rolled" do
   
     it "scores zero" do
-      roll = [2,3,4,5,6]
+      dice = [2,3,4,5,6]
       scorer = NumberScorer.new(1)
   
-      score = scorer.score(roll)
+      score = scorer.score(dice)
   
       expect(score).to eq(0)
     end
@@ -18,10 +18,10 @@ describe NumberScorer do
   context "when a single occurance of number is rolled" do
 
     it "scores sum of occurances" do
-      roll = [1,2,3,4,5]
+      dice = [1,2,3,4,5]
       scorer = NumberScorer.new(1)
 
-      score = scorer.score(roll)
+      score = scorer.score(dice)
 
       expect(score).to eq(1)
     end
@@ -31,10 +31,10 @@ describe NumberScorer do
   context "when many occurances of number are rolled" do
 
     it "scores sum of occurances" do
-      roll = [1,1,1,1,1]
+      dice = [1,1,1,1,1]
       scorer = NumberScorer.new(1)
 
-      score = scorer.score(roll)
+      score = scorer.score(dice)
 
       expect(score).to eq(5)
     end

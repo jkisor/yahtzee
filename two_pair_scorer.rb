@@ -1,13 +1,13 @@
-require "./roll"
+require "./dice"
 
 class TwoPairScorer
   
-  def score(roll)
-    roll = Roll.new(roll)
+  def score(dice)
+    dice = Dice.new(dice)
 
-    return 0 if roll.pairs.count < 2
+    return 0 if dice.pairs.count < 2
 
-    roll.pairs.map { |number| number * 2 }.reduce(0, :+)
+    dice.pairs.map { |number| number * 2 }.reduce(0, :+)
   end
 
 end

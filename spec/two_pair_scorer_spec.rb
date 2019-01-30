@@ -5,8 +5,8 @@ describe TwoPairScorer do
   context "when no pairs" do
 
     it "scores zero" do
-      roll = [1,2,3,4,5]
-      score = subject.score(roll)
+      dice = [1,2,3,4,5]
+      score = subject.score(dice)
 
       expect(score).to eq(0)
     end
@@ -16,8 +16,8 @@ describe TwoPairScorer do
   context "when two pairs" do
 
     it "scores sum both pairs" do
-      roll = [1,1,2,2,5]
-      score = subject.score(roll)
+      dice = [1,1,2,2,5]
+      score = subject.score(dice)
 
       expect(score).to eq(6)
     end
