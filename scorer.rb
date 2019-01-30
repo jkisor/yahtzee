@@ -1,7 +1,8 @@
 require "./number_scorer"
 require "./two_pair_scorer"
 require "./n_of_a_kind_scorer"
-class SmallStraightScorer ; end
+require "./small_straight_scorer"
+
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
