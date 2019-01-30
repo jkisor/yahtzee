@@ -21,7 +21,7 @@ describe SmallStraightScorer do
       
       score = subject.score(roll)
 
-      expect(score).not_to eq(15)
+      expect(score).to eq(15)
     end
 
   end
