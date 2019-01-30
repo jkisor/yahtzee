@@ -1,6 +1,6 @@
-require "./two_pair_scorer"
+require "./two_pair"
 
-describe TwoPairScorer do
+describe TwoPair do
   
   context "when no pairs" do
 

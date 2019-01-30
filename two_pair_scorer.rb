@@ -1,6 +1,6 @@
 require "./dice"
 
-class TwoPairScorer
+class TwoPair
   
   def score(dice)
     dice = Dice.new(dice)
