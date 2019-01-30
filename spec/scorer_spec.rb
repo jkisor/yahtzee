@@ -25,7 +25,7 @@ describe Scorer do
     it "creates a scorer" do
       category = :two_pair
       scorer = subject.for_category(category)
-      expect(scorer).to be_a TwoPairScorer
+      expect(scorer).to be_a TwoPair
     end
   end
 

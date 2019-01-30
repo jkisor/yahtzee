@@ -1,5 +1,5 @@
 require "./number"
-require "./two_pair_scorer"
+require "./two_pair"
 require "./n_of_a_kind_scorer"
 require "./small_straight"
 
@@ -16,7 +16,7 @@ module Scorer
     :three_of_a_kind => NOfAKindScorer.new(3),
     :four_of_a_kind  => NOfAKindScorer.new(4),
 
-    :two_pair       => TwoPairScorer.new,
+    :two_pair       => TwoPair.new,
     :small_straight => SmallStraight.new
 
   }
