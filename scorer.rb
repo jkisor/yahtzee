@@ -13,6 +13,12 @@ module Scorer
     :sixes  => 6
   }
 
+  COUNT_BY_CATEGORY = {
+    :pair            => 2,
+    :three_of_a_kind => 3,
+    :four_of_a_kind  => 4
+  }
+
   def self.for_category(category)
 
     case category
@@ -20,8 +26,10 @@ module Scorer
       number = NUMBER_BY_CATEGORY.fetch(category)
 
       NumberScorer.new(number)
-    when :pair
-      NOfAKindScorer.new(2)
+    when *COUNT_BY_CATEGORY.keys
+      n = COUNT_BY_CATEGORY.fetch(category)
+
+      NOfAKindScorer.new(n)
     when :two_pair
       TwoPairScorer.new
     when :three_of_a_kind
