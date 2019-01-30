@@ -4,9 +4,7 @@ require "./n_of_a_kind"
 require "./small_straight"
 require "./large_straight"
 require "./yahtzee"
-
-class Chance
-end
+require "./chance"
 
 module Scorer
   SCORER_BY_CATEGORY = {
