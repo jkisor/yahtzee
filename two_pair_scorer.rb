@@ -10,7 +10,8 @@ class TwoPairScorer
   private
 
   def pairs(roll)
-    roll.group_by { |number| number }.select { |k,v| v.count >= 2 }.keys
+    grouped = roll.group_by { |number| number }
+    grouped.select { |k,v| v.count >= 2 }.keys
   end
 
 end
