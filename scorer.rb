@@ -1,5 +1,4 @@
 require "./number_scorer"
-require "./pair_scorer"
 require "./two_pair_scorer"
 require "./n_of_a_kind_scorer"
 
@@ -22,7 +21,7 @@ module Scorer
 
       NumberScorer.new(number)
     when :pair
-      PairScorer.new
+      NOfAKindScorer.new(2)
     when :two_pair
       TwoPairScorer.new
     when :three_of_a_kind
