@@ -32,10 +32,6 @@ module Scorer
       NOfAKindScorer.new(n)
     when :two_pair
       TwoPairScorer.new
-    when :three_of_a_kind
-      NOfAKindScorer.new(3)
-    when :four_of_a_kind
-      NOfAKindScorer.new(4)
     end
 
   end
