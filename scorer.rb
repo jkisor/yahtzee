@@ -3,9 +3,8 @@ require "./two_pair"
 require "./n_of_a_kind"
 require "./small_straight"
 require "./large_straight"
+require "./yahtzee"
 
-class Yahtzee
-end
 
 module Scorer
   SCORER_BY_CATEGORY = {
