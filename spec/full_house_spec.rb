@@ -26,4 +26,16 @@ describe FullHouse do
     end
   end
 
+  context "match" do
+  
+    it "scores zero" do
+      dice = [2,2,3,3,3]
+      
+      score = subject.score(dice)
+
+      expect(score).not_to eq(13)
+    end
+  
+  end
+
 end
