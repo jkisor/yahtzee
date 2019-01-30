@@ -1,6 +1,13 @@
 require "./small_straight_scorer"
 
 describe SmallStraightScorer do
-  it "" do
+  
+  context "no match" do
+
+    it "" do
+    
+    end
+
   end
+  
 end
