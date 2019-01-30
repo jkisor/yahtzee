@@ -7,7 +7,7 @@ describe Scorer do
     context "for #{category} category" do
       it "creates a scorer" do
         scorer = subject.for_category(category)
-        expect(scorer).to be_a NumberScorer
+        expect(scorer).to be_a Number
       end
     end
   end
