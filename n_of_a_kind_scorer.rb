@@ -8,7 +8,7 @@ class NOfAKindScorer
 
     roll = Roll.new(roll)
     
-    (roll.n_of_a_kind(@count) || 0) * @count
+    (roll.n_of_a_kind(@count).max || 0) * @count
 
   end
 
