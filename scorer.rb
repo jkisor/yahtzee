@@ -4,7 +4,10 @@ require "./n_of_a_kind_scorer"
 require "./small_straight_scorer"
 
 module Scorer
-  
+  SCORER_BY_CATEGORY = {
+    :ones => NumberScorer.new(1)
+  }
+
   NUMBER_BY_CATEGORY = { 
     :ones   => 1, 
     :twos   => 2,
