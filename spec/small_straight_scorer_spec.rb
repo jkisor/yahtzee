@@ -4,7 +4,7 @@ describe SmallStraightScorer do
   
   context "no match" do
 
-    it "" do
+    it "scores zero" do
       roll = [3,5,6,1,2]
       
       score = subject.score(roll)
@@ -13,5 +13,16 @@ describe SmallStraightScorer do
     end
 
   end
-  
+
+  context "match" do
+
+    it "scores sum of die" do
+      roll = [1,2,3,4,5]
+      
+      score = subject.score(roll)
+
+      expect(score).not_to eq(15)
+    end
+
+  end
 end
