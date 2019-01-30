@@ -5,9 +5,7 @@ require "./small_straight"
 require "./large_straight"
 require "./yahtzee"
 require "./chance"
-
-class FullHouse
-end
+require "./full_house"
 
 module Scorer
   SCORER_BY_CATEGORY = {
