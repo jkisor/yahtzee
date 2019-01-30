@@ -54,7 +54,7 @@ describe Scorer do
     end
   end
 
-  pending "for large straight category" do
+  context "for large straight category" do
     it "creates a scorer" do
       category = :large_straight
       scorer = subject.for_category(category)
