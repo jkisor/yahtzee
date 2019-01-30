@@ -2,7 +2,7 @@ require "./number"
 require "./two_pair"
 require "./n_of_a_kind"
 require "./small_straight"
-class LargeStraight ; end
+require "./large_straight"
 
 module Scorer
   SCORER_BY_CATEGORY = {
