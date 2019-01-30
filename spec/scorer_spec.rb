@@ -62,4 +62,12 @@ describe Scorer do
     end
   end
 
+  context "for yahtzee category" do
+    it "creates a scorer" do
+      category = :yahtzee
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a Yahtzee
+    end
+  end
+
 end

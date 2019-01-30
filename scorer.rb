@@ -4,6 +4,9 @@ require "./n_of_a_kind"
 require "./small_straight"
 require "./large_straight"
 
+class Yahtzee
+end
+
 module Scorer
   SCORER_BY_CATEGORY = {
     :ones   => Number.new(1),
@@ -19,8 +22,9 @@ module Scorer
 
     :two_pair       => TwoPair.new,
     :small_straight => SmallStraight.new,
-    :large_straight => LargeStraight.new
+    :large_straight => LargeStraight.new,
 
+    :yahtzee => Yahtzee.new
   }
 
   def self.for_category(category)
