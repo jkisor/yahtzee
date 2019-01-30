@@ -13,4 +13,15 @@ describe Yahtzee do
 
   end
 
+  context "when all die are the same" do
+
+    it "scores sum of dice" do
+      dice = [1,1,1,1,1]
+      score = subject.score(dice)
+
+      expect(score).not_to eq(5)
+    end
+
+  end
+
 end
