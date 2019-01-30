@@ -6,6 +6,9 @@ require "./large_straight"
 require "./yahtzee"
 require "./chance"
 
+class FullHouse
+end
+
 module Scorer
   SCORER_BY_CATEGORY = {
     :ones   => Number.new(1),
@@ -23,8 +26,9 @@ module Scorer
     :small_straight => SmallStraight.new,
     :large_straight => LargeStraight.new,
 
-    :yahtzee => Yahtzee.new,
-    :chance  => Chance.new
+    :full_house => FullHouse.new,
+    :yahtzee    => Yahtzee.new,
+    :chance     => Chance.new
   }
 
   def self.for_category(category)

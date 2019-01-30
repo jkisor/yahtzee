@@ -78,4 +78,12 @@ describe Scorer do
     end
   end
 
+  context "for full house category" do
+    it "creates a scorer" do
+      category = :full_house
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a FullHouse
+    end
+  end
+
 end
