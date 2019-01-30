@@ -16,4 +16,14 @@ describe FullHouse do
   
   end
 
+  context "all same die" do
+    it "scores zero" do
+      dice = [1,1,1,1,1]
+      
+      score = subject.score(dice)
+
+      expect(score).to eq(0)
+    end
+  end
+
 end
