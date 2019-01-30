@@ -10,11 +10,7 @@ class TwoPairScorer
   private
 
   def pairs(roll)
-    roll.group_by { |number| number }
-        .map { |number, numbers| [number, numbers.count ] }
-        .to_h
-        .select { |number, count| count >= 2 }
-        .keys
+    roll.group_by { |number| number }.select { |k,v| v.count >= 2 }.keys
   end
 
 end
