@@ -19,7 +19,7 @@ describe Yahtzee do
       dice = [1,1,1,1,1]
       score = subject.score(dice)
 
-      expect(score).not_to eq(5)
+      expect(score).to eq(5)
     end
 
   end

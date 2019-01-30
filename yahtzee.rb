@@ -1,7 +1,9 @@
 class Yahtzee
 
   def score(dice)
-    0
+    return 0 if dice.uniq.count != 1
+
+    dice.reduce(0, :+)
   end
 
 end
