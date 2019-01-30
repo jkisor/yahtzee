@@ -70,4 +70,12 @@ describe Scorer do
     end
   end
 
+  context "for chance category" do
+    it "creates a scorer" do
+      category = :chance
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a Chance
+    end
+  end
+
 end
