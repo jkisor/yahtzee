@@ -5,41 +5,24 @@ require "./small_straight_scorer"
 
 module Scorer
   SCORER_BY_CATEGORY = {
-    :ones => NumberScorer.new(1)
-  }
+    :ones   => NumberScorer.new(1),
+    :twos   => NumberScorer.new(2),
+    :threes => NumberScorer.new(3),
+    :fours  => NumberScorer.new(4),
+    :fives  => NumberScorer.new(5),
+    :sixes  => NumberScorer.new(6),
 
-  NUMBER_BY_CATEGORY = { 
-    :ones   => 1, 
-    :twos   => 2,
-    :threes => 3,
-    :fours  => 4,
-    :fives  => 5,
-    :sixes  => 6
-  }
+    :pair            => NOfAKindScorer.new(2),
+    :three_of_a_kind => NOfAKindScorer.new(3),
+    :four_of_a_kind  => NOfAKindScorer.new(4),
 
-  COUNT_BY_CATEGORY = {
-    :pair            => 2,
-    :three_of_a_kind => 3,
-    :four_of_a_kind  => 4
+    :two_pair       => TwoPairScorer.new,
+    :small_straight => SmallStraightScorer.new
+
   }
 
   def self.for_category(category)
-
-    case category
-    when *NUMBER_BY_CATEGORY.keys
-      number = NUMBER_BY_CATEGORY.fetch(category)
-
-      NumberScorer.new(number)
-    when *COUNT_BY_CATEGORY.keys
-      n = COUNT_BY_CATEGORY.fetch(category)
-
-      NOfAKindScorer.new(n)
-    when :two_pair
-      TwoPairScorer.new
-    when :small_straight
-      SmallStraightScorer.new
-    end
-
+    SCORER_BY_CATEGORY.fetch(category)
   end
 
 end
