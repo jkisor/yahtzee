@@ -7,7 +7,7 @@ class TwoPairScorer
 
     return 0 if roll.pairs.count < 2
 
-    roll.pairs.map { |x| x * 2 }.reduce(0, :+)
+    roll.pairs.map { |number| number * 2 }.reduce(0, :+)
   end
 
 end
