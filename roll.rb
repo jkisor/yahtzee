@@ -13,8 +13,6 @@ class Roll
     n_of_a_kind(3)
   end
 
-  private
-
   def grouped_numbers
     @numbers.group_by { |number| number }
   end
