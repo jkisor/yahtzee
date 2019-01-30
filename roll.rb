@@ -6,13 +6,17 @@ class Roll
   end
 
   def pairs
-    grouped = @numbers.group_by { |number| number }
-    grouped.select { |k,v| v.count >= 2 }.keys
+    grouped_numbers.select { |k,v| v.count >= 2 }.keys
   end
 
   def trios
-    grouped = @numbers.group_by { |number| number }
-    grouped.select { |k,v| v.count >= 3 }.keys
+    grouped_numbers.select { |k,v| v.count >= 3 }.keys
+  end
+
+  private
+
+  def grouped_numbers
+    @numbers.group_by { |number| number }
   end
 
 end
