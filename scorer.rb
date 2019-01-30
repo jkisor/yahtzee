@@ -1,7 +1,7 @@
 require "./number_scorer"
 require "./two_pair_scorer"
 require "./n_of_a_kind_scorer"
-
+class SmallStraightScorer ; end
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
@@ -32,6 +32,8 @@ module Scorer
       NOfAKindScorer.new(n)
     when :two_pair
       TwoPairScorer.new
+    when :small_straight
+      SmallStraightScorer.new
     end
 
   end
