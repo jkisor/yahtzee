@@ -3,6 +3,9 @@ require "./pair_scorer"
 require "./two_pair_scorer"
 require "./three_of_a_kind_scorer"
 
+class FourOfAKindScorer
+end
+
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
@@ -27,6 +30,8 @@ module Scorer
       TwoPairScorer.new
     when :three_of_a_kind
       ThreeOfAKindScorer.new
+    when :four_of_a_kind
+      FourOfAKindScorer.new
     end
 
   end

@@ -37,4 +37,13 @@ describe Scorer do
       expect(scorer).to be_a ThreeOfAKindScorer
     end
   end
+
+  context "for four of a kind category" do
+    it "creates a scorer" do
+      category = :four_of_a_kind
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a FourOfAKindScorer
+    end
+  end
+
 end
