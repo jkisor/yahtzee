@@ -21,7 +21,7 @@ describe ThreeOfAKindScorer do
       
       score = subject.score(roll)
 
-      expect(score).not_to eq(3)
+      expect(score).to eq(3)
     end
 
   end
