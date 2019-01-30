@@ -1,7 +1,7 @@
 require "./number_scorer"
 require "./two_pair_scorer"
 require "./n_of_a_kind_scorer"
-require "./small_straight_scorer"
+require "./small_straight"
 
 module Scorer
   SCORER_BY_CATEGORY = {
@@ -17,7 +17,7 @@ module Scorer
     :four_of_a_kind  => NOfAKindScorer.new(4),
 
     :two_pair       => TwoPairScorer.new,
-    :small_straight => SmallStraightScorer.new
+    :small_straight => SmallStraight.new
 
   }
 

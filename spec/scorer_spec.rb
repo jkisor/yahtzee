@@ -50,7 +50,7 @@ describe Scorer do
     it "creates a scorer" do
       category = :small_straight
       scorer = subject.for_category(category)
-      expect(scorer).to be_a SmallStraightScorer
+      expect(scorer).to be_a SmallStraight
     end
   end
 
