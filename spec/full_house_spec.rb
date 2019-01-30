@@ -33,7 +33,7 @@ describe FullHouse do
       
       score = subject.score(dice)
 
-      expect(score).not_to eq(13)
+      expect(score).to eq(13)
     end
   
   end
