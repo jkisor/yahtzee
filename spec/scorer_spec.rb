@@ -54,4 +54,12 @@ describe Scorer do
     end
   end
 
+  pending "for large straight category" do
+    it "creates a scorer" do
+      category = :large_straight
+      scorer = subject.for_category(category)
+      expect(scorer).to be_a LargeStraight
+    end
+  end
+
 end
