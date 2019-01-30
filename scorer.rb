@@ -4,7 +4,7 @@ require "./two_pair_scorer"
 require "./three_of_a_kind_scorer"
 require "./four_of_a_kind_scorer"
 
-class NOfAKind
+class NOfAKindScorer
   
   def initialize(count)
     @count = count
@@ -43,9 +43,9 @@ module Scorer
     when :two_pair
       TwoPairScorer.new
     when :three_of_a_kind
-      NOfAKind.new(3)
+      NOfAKindScorer.new(3)
     when :four_of_a_kind
-      NOfAKind.new(4)
+      NOfAKindScorer.new(4)
     end
 
   end

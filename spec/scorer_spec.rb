@@ -34,7 +34,7 @@ describe Scorer do
     it "creates a scorer" do
       category = :three_of_a_kind
       scorer = subject.for_category(category)
-      expect(scorer).to be_a NOfAKind
+      expect(scorer).to be_a NOfAKindScorer
     end
   end
 
@@ -42,7 +42,7 @@ describe Scorer do
     it "creates a scorer" do
       category = :four_of_a_kind
       scorer = subject.for_category(category)
-      expect(scorer).to be_a NOfAKind
+      expect(scorer).to be_a NOfAKindScorer
     end
   end
 
