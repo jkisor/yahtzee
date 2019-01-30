@@ -14,5 +14,16 @@ describe ThreeOfAKindScorer do
   
   end
 
+  context "three of a kind" do
+
+    it "scores sum of three of a kind" do
+      roll = [1,1,1,4,5]
+      
+      score = subject.score(roll)
+
+      expect(score).not_to eq(3)
+    end
+
+  end
 
 end
