@@ -4,6 +4,22 @@ require "./two_pair_scorer"
 require "./three_of_a_kind_scorer"
 require "./four_of_a_kind_scorer"
 
+class NOfAKind
+  
+  def initialize(count)
+    @count = count
+  end
+
+  def score(roll)
+
+    roll = Roll.new(roll)
+    
+    (roll.n_of_a_kind(@count) || 0) * @count
+
+  end
+
+end
+
 module Scorer
   
   NUMBER_BY_CATEGORY = { 
@@ -27,9 +43,9 @@ module Scorer
     when :two_pair
       TwoPairScorer.new
     when :three_of_a_kind
-      ThreeOfAKindScorer.new
+      NOfAKind.new(3)
     when :four_of_a_kind
-      FourOfAKindScorer.new
+      NOfAKind.new(4)
     end
 
   end
