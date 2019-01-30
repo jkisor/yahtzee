@@ -1,6 +1,6 @@
-require "./n_of_a_kind_scorer"
+require "./n_of_a_kind"
 
-describe NOfAKindScorer do
+describe NOfAKind do
 
   subject { described_class.new(4) }
 
