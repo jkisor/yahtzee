@@ -1,7 +1,7 @@
 require "./two_pair"
 
 describe TwoPair do
-  
+
   context "when no pairs" do
 
     it "scores zero" do

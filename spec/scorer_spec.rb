@@ -2,7 +2,7 @@ require "./scorer"
 
 describe Scorer do
   subject { described_class }
-  
+
   [:ones, :twos, :threes, :fours, :fives, :sixes].each do |category|
     context "for #{category} category" do
       it "creates a scorer" do
@@ -19,7 +19,7 @@ describe Scorer do
       expect(scorer).to be_a NOfAKind
     end
   end
-  
+
 
   context "for two pair category" do
     it "creates a scorer" do

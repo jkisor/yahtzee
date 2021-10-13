@@ -3,16 +3,16 @@ require "./number"
 describe Number do
 
   context "when no occurances of number are rolled" do
-  
+
     it "scores zero" do
       dice = [2,3,4,5,6]
       scorer = Number.new(1)
-  
+
       score = scorer.score(dice)
-  
+
       expect(score).to eq(0)
     end
-  
+
   end
 
   context "when a single occurance of number is rolled" do

@@ -2,7 +2,7 @@ class FullHouse
 
   def score(dice)
     grouped_numbers = dice.group_by { |number| number }
-    
+
     trio = grouped_numbers.select { |k,v| v.count == 3 }
     pair = grouped_numbers.select { |k,v| v.count == 2 }
 

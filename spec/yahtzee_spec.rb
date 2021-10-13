@@ -1,7 +1,7 @@
 require "./yahtzee"
 
 describe Yahtzee do
-  
+
   context "when not all die are the same" do
 
     it "scores zero" do

@@ -1,7 +1,7 @@
 require "./dice"
 
 class TwoPair
-  
+
   def score(dice)
     dice = Dice.new(dice)
 
